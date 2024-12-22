@@ -16,7 +16,7 @@ export default function Home() {
       </div>
       <div className="flex-1 flex items-center justify-center">
         <Image
-          className="rounded-lg floating"
+          className="rounded-lg floating drop-shadow-xl"
           src="/website_logo.png"
           width={500}
           height={500}

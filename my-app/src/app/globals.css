@@ -22,3 +22,9 @@ body {
   65%  { transform: translate(0, 15px); }
   to   { transform: translate(0, -0px); }    
 }
+
+/* NavBar */
+
+.navbar {
+  background-color: #303033;
+}
