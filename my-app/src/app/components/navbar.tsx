@@ -10,16 +10,16 @@ export default function NavBar() {
       </div>
       <div>
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-10">
-          <Link href="/">
+          <Link href="/projects">
             Projects
           </Link>
-          <Link href="/">
+          <Link href="/experience">
             Experience
           </Link>
-          <Link href="/">
-            About Me
+          <Link href="/about">
+            About
           </Link>
-          <Link href="/">
+          <Link href="/blog">
             Blog
           </Link>
         </div>
