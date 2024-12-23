@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "./components/navbar";
+import Footer from "./components/footer";
 
 const opensauce = localFont({
   src: [
@@ -55,6 +56,7 @@ export default function RootLayout({
       >
         <NavBar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
