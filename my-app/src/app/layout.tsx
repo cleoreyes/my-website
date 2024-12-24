@@ -51,12 +51,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={opensauce.className}
-      >
-        <NavBar/>
+      <body className={opensauce.className}>
+        <NavBar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
