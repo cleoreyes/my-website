@@ -5,8 +5,8 @@ export default function Experience() {
     // <div className="flex items-center justify-center min-h-screen px-24">
     <div className="flex min-h-screen px-40 mt-36">
       <title>Experience</title>
-      <div className="text-6xl text-white font-medium text-left">
-        <h1>Experience</h1>
+      <div className="text-5xl text-white font-semibold text-left">
+        <h1 className="pb-12">Experience</h1>
       </div>
     </div>
   );
