@@ -51,6 +51,25 @@ body {
   background-color: #303033;
 }
 
+.navLink {
+  padding: 8px 16px; /* Keep padding consistent */
+  border-radius: 100px; /* Ensure border-radius is consistent */
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease; /* Add smooth transitions */
+}
+
+.navLink:hover {
+  background-color: #4c4c53;
+}
+
+.navLink.active {
+  padding: 8px 16px;
+  border-radius: 100px;
+  background-color: #4c4c53; /* Styles for the active page link */
+  box-shadow: 0px 24px 48px 0 rgba(0, 0, 0, 0.16);
+}
+
 /* Projects */
 
 .project {

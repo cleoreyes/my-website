@@ -23,14 +23,16 @@ export default function About() {
             <p className="font-extralight pt-2">
               BS in Informatics, Software Engineering
             </p>
-            <p className="font-extralight pt-1">University of Washington, Seattle</p>
+            <p className="font-extralight pt-1">
+              University of Washington, Seattle
+            </p>
           </div>
 
           <div className="w-2/3 text-lg font-extralight pl-6 text-gray-200">
             <p className="pb-3">
-              Hi there! I&apos;m Cleo Reyes, an undergraduate at the University of
-              Washington, set to graduate in 2026. I&apos;m pursuing a degree in
-              Informatics with a focus on Software Engineering, and I&apos;m
+              Hi there! I&apos;m Cleo Reyes, an undergraduate at the University
+              of Washington, set to graduate in 2026. I&apos;m pursuing a degree
+              in Informatics with a focus on Software Engineering, and I&apos;m
               deeply passionate about using technology to make a positive impact
               on the world. My interests span creating accessibile software, big
               data, and responsible use of AI and ML to solve real word
