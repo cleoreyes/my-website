@@ -1,26 +1,26 @@
-"use client";
+"use client"
 import Image from "next/image";
 import { useEffect, useState } from "react";
+
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timeout);
-  }, []);
-
+  
+      const timeout = setTimeout(() => setIsVisible(true), 100);
+      return () => clearTimeout(timeout);
+    }, []);
+  
   return (
     <div className="min-h-screen px-44 mt-40">
       <title>About</title>
       <div className="text-5xl text-white font-semibold text-left">
         <h1 className="pb-12">About</h1>
       </div>
-      <div
-        className={`flex flex-col items-center justify-center ${
-          isVisible ? "bottom-enter" : "opacity-0"
-        }`}
-      >
+      <div className={`flex flex-col items-center justify-center ${
+            isVisible ? "bottom-enter" : "opacity-0"
+          }`}>
         <div className="flex flex-row items-center">
           <div className="w-1/3 text-white flex flex-col items-center text-center">
             <Image
@@ -40,7 +40,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-gray-400"
               >
-                BS in Informatics
+                BS in{" "}Informatics
               </a>
               ,{" "}
               <a

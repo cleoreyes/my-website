@@ -46,7 +46,7 @@ const Project: React.FC<ProjectProps> = ({
     <div
       className={`text-white pb-10 group ${isVisible ? "bottom-enter" : "opacity-0"}`}
     >
-      <div className="rounded-3xl flex flex-col px-14 py-10 mx-20 overflow-hidden project">
+      <div className="rounded-2xl flex flex-col px-14 py-10 mx-20 overflow-hidden project">
         <div className="flex flex-col md:flex-row">
           <div className="flex-col pr-14">
             <p className="text-2xl pb-8">{projectName}</p>
