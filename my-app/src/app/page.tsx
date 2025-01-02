@@ -13,6 +13,7 @@ import { loadSlim } from "@tsparticles/slim"; // Import the slim package for a s
 
 export default function Home() {
   const [init, setInit] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   // Initialize the tsParticles engine only once
   useEffect(() => {
@@ -21,6 +22,10 @@ export default function Home() {
     }).then(() => {
       setInit(true);
     });
+
+    // Trigger the entrance animation after a slight delay
+    const timeout = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timeout);
   }, []);
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
@@ -106,7 +111,11 @@ export default function Home() {
           options={options}
         />
 
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center px-40 text-white">
+        <div
+          className={`absolute top-0 left-0 w-full h-full flex items-center justify-center px-40 text-white ${
+            isVisible ? "top-enter" : "opacity-0"
+          }`}
+        >
           <div className="flex-1 text-left">
             <p className="text-gray-300 font-semibold text-2xl">
               Hello and welcome, I&apos;m glad you&apos;re here.

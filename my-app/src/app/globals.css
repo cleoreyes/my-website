@@ -45,6 +45,36 @@ body {
   }
 }
 
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.page-enter {
+  animation: slideInFromBottom 0.8s ease-out forwards;
+}
+
+.top-enter {
+  animation: slideInFromTop 0.8s ease-out forwards;
+}
+
 /* NavBar */
 
 .navbar {
