@@ -17,8 +17,6 @@ interface ProjectProps {
 
 const Project: React.FC<ProjectProps> = ({
   projectName,
-  duration,
-  typeOfProject,
   technologies,
   image,
   imageAlt,
@@ -108,7 +106,6 @@ const Projects: React.FC = () => {
         {currentProjects}
       </div>
 
-      {/* Pagination Controls */}
       <div className="flex justify-center mt-8 pb-4">
         <button
           onClick={handlePrevPage}
