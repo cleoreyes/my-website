@@ -36,12 +36,12 @@ export default function NavBar() {
           >
             About
           </Link>
-          <Link
+          {/* <Link
             className={`navLink ${pathname === "/blog" ? "active" : ""}`}
             href="/blog"
           >
             Blog
-          </Link>
+          </Link> */}
         </div>
       </div>
     </nav>
