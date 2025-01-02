@@ -9,21 +9,18 @@ import {
   MoveDirection,
   OutMode,
 } from "@tsparticles/engine";
-import { loadSlim } from "@tsparticles/slim"; // Import the slim package for a smaller bundle
-
+import { loadSlim } from "@tsparticles/slim";
 export default function Home() {
   const [init, setInit] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Initialize the tsParticles engine only once
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadSlim(engine); // Load slim particles to keep the bundle size small
+      await loadSlim(engine);
     }).then(() => {
       setInit(true);
     });
 
-    // Trigger the entrance animation after a slight delay
     const timeout = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timeout);
   }, []);
@@ -105,6 +102,7 @@ export default function Home() {
   if (init) {
     return (
       <div className="relative w-full h-screen">
+        <title>Cleo Reyes</title>
         <Particles
           id="tsparticles"
           particlesLoaded={particlesLoaded}
