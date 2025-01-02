@@ -1,18 +1,31 @@
+"use client"
 import Image from "next/image";
+import { useEffect, useState } from "react";
+
 
 export default function About() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+  
+      const timeout = setTimeout(() => setIsVisible(true), 100);
+      return () => clearTimeout(timeout);
+    }, []);
+  
   return (
     <div className="min-h-screen px-44 mt-40">
       <title>About</title>
       <div className="text-5xl text-white font-semibold text-left">
         <h1 className="pb-12">About</h1>
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className={`flex flex-col items-center justify-center ${
+            isVisible ? "bottom-enter" : "opacity-0"
+          }`}>
         <div className="flex flex-row items-center">
           <div className="w-1/3 text-white flex flex-col items-center text-center">
             <Image
               className="rounded-full drop-shadow-2xl pb-4"
-              src="/cleo_leather.png"
+              src="/cleo_linkedin.jpeg"
               width={300}
               height={300}
               alt="Cleo"
@@ -21,10 +34,33 @@ export default function About() {
             />
             <p className="text-xl">Cleo Reyes</p>
             <p className="font-extralight pt-2">
-              BS in Informatics, Software Engineering
+              <a
+                href="https://ischool.uw.edu/programs/informatics"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-gray-400"
+              >
+                BS in{" "}Informatics
+              </a>
+              ,{" "}
+              <a
+                href="https://en.wikipedia.org/wiki/Software_engineering"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-gray-400"
+              >
+                Software Engineering
+              </a>
             </p>
             <p className="font-extralight pt-1">
-              University of Washington, Seattle
+              <a
+                href="https://www.washington.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-gray-400"
+              >
+                University of Washington, Seattle
+              </a>
             </p>
           </div>
 

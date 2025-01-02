@@ -67,8 +67,8 @@ body {
   }
 }
 
-.page-enter {
-  animation: slideInFromBottom 0.8s ease-out forwards;
+.bottom-enter {
+  animation: slideInFromBottom 0.4s ease-out forwards;
 }
 
 .top-enter {
