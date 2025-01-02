@@ -1,13 +1,17 @@
 "use client";
 import Image from "next/image";
-import projectData from "../projects.json";
+import { projectsData } from "@/lib/data";
 import { useEffect, useState } from "react";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowLeft } from "react-icons/md";
+
+
 
 interface ProjectProps {
   projectName: string;
   duration: string;
   typeOfProject: string;
-  technologies: string[];
+  technologies: readonly string[];
   image: string;
   imageAlt: string;
   githubLink?: string;
@@ -32,19 +36,23 @@ const Project: React.FC<ProjectProps> = ({
   ));
 
   const [isVisible, setIsVisible] = useState(false);
-  
+
   useEffect(() => {
     const timeout = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timeout);
   }, []);
 
   return (
-    <div className={`text-white pb-10 group ${isVisible ? "bottom-enter" : "opacity-0"}`}>
+    <div
+      className={`text-white pb-10 group ${isVisible ? "bottom-enter" : "opacity-0"}`}
+    >
       <div className="rounded-3xl flex flex-col px-14 py-10 mx-20 overflow-hidden project">
         <div className="flex flex-col md:flex-row">
           <div className="flex-col pr-14">
-            <p className="text-4xl pb-8">{projectName}</p>
-            <p className="text-xl font-extralight text-gray-200">{description}</p>
+            <p className="text-2xl pb-8">{projectName}</p>
+            <p className="text-base font-extralight text-gray-200">
+              {description}
+            </p>
           </div>
           <div className="translate-x-[45%] translate-y-[45%] relative flex items-center justify-center overflow-hidden rounded-lg transform transition-transform duration-500 group-hover:translate-x-[0%] group-hover:translate-y-[0%] group-hover:scale-110">
             <Image
@@ -70,7 +78,7 @@ const Projects: React.FC = () => {
   const projectsPerPage = 4;
   const [currentPage, setCurrentPage] = useState(1);
 
-  const totalProjects = Object.values(projectData).length;
+  const totalProjects = Object.values(projectsData).length;
   const totalPages = Math.ceil(totalProjects / projectsPerPage);
 
   const handleNextPage = () => {
@@ -81,7 +89,7 @@ const Projects: React.FC = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
-  const currentProjects = Object.values(projectData)
+  const currentProjects = Object.values(projectsData)
     .slice((currentPage - 1) * projectsPerPage, currentPage * projectsPerPage)
     .map((project) => (
       <Project
@@ -110,19 +118,19 @@ const Projects: React.FC = () => {
         <button
           onClick={handlePrevPage}
           disabled={currentPage === 1}
-          className="bg-gray-600 text-white py-2 px-4 rounded-l-lg"
+          className={`bg-gray-600/50 text-white p-1 rounded-full ${currentPage === 1 ? 'hidden' : 'visible'} `}
         >
-          Previous
+          <MdKeyboardArrowLeft className="text-3xl"/>
         </button>
         <span className="px-4 py-2 text-white">
-          Page {currentPage} of {totalPages}
+          {currentPage} of {totalPages}
         </span>
         <button
           onClick={handleNextPage}
           disabled={currentPage === totalPages}
-          className="bg-gray-600 text-white py-2 px-4 rounded-r-lg"
+          className={`bg-gray-600/50 text-white p-1 rounded-full ${currentPage === totalPages ? 'hidden' : 'visible'} `}
         >
-          Next
+          <MdKeyboardArrowRight className="text-3xl"/>
         </button>
       </div>
     </div>
