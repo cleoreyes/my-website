@@ -1,35 +1,108 @@
+"use client";
 import Image from "next/image";
+import projectData from "../projects.json";
+import { useEffect, useState } from "react";
 
-export default function Projects() {
+interface ProjectProps {
+  projectName: string;
+  duration: string;
+  typeOfProject: string;
+  technologies: string[];
+  image: string;
+  imageAlt: string;
+  githubLink?: string;
+  projectLink?: string;
+  description: string;
+}
+
+const Project: React.FC<ProjectProps> = ({
+  projectName,
+  duration,
+  typeOfProject,
+  technologies,
+  image,
+  imageAlt,
+  githubLink,
+  projectLink,
+  description,
+}) => {
+  const mappedTechnologies = technologies.map((technology, index) => (
+    <div
+      key={index}
+      className="text-sm md:text-md bg-gray-500 px-5 py-1 mb-3 rounded-full ml-4 text-white"
+    >
+      <p>{technology}</p>
+    </div>
+  ));
+
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
-    <div className="flex min-h-screen px-40 mt-36">
-      <title>Projects</title>
-      <div className="text-6xl text-white font-medium text-left">
-        <h1 className="pb-12">Projects</h1>
-
-        <div>
-          <div className="project flex flex-col md:flex-row p-14 rounded-3xl mx-10">
-            <div className="flex-col pr-10">
-              <p className="text-4xl pb-8">Eterna</p>
-              <p className="text-2xl font-light">
-                A web application to memorialize the memories and artifacts in a
-                digital form.
-              </p>
-            </div>
-            <div>
-              <Image
-                className="rounded-lg drop-shadow-xl hover:tip-left"
-                src="/eterna.png"
-                width={450}
-                height={450}
-                alt="Cleo"
-                draggable={false}
-                priority={true}
-              />
-            </div>
+    <div className={`text-white pb-10 group ${
+      isVisible ? "bottom-enter" : "opacity-0"
+    }`}>
+      <div className="rounded-3xl flex flex-col px-14 py-10 mx-20 overflow-hidden project">
+        <div className="flex flex-col md:flex-row">
+          <div className="flex-col pr-14">
+            <p className="text-4xl pb-8">{projectName}</p>
+            <p className="text-xl font-extralight text-gray-200">{description}</p>
           </div>
+          <div className="translate-x-[45%] translate-y-[45%] relative flex items-center justify-center overflow-hidden rounded-lg transform transition-transform duration-500 group-hover:translate-x-[0%] group-hover:translate-y-[0%] group-hover:scale-110">
+            <Image
+              className="rounded-lg drop-shadow-2xl"
+              src={image}
+              width={4000}
+              height={4000}
+              alt={imageAlt}
+              draggable={false}
+              priority={true}
+            />
+          </div>
+        </div>
+        <div className="flex flex-wrap justify-start pb-2 -ml-4 pt-5">
+          {mappedTechnologies}
         </div>
       </div>
     </div>
   );
-}
+};
+
+const Projects: React.FC = () => {
+  const projects = Object.values(projectData).map((project) => (
+    <Project
+      projectName={project.projectName}
+      duration={project.duration}
+      typeOfProject={project.typeOfProject}
+      technologies={project.technologies}
+      image={project.image}
+      imageAlt={project.imageAlt}
+      // githubLink={project.githubLink}
+      // projectLink={project.projectLink}
+      description={project.description}
+      key={project.projectName} // Use a unique key, usually `id` or `projectName`
+    />
+  ));
+
+  return (
+    
+    <div className="min-h-screen px-44 mt-40">
+      <title>Projects</title>
+      <div className="text-5xl text-white font-semibold text-left">
+        <h1 className="pb-12">Projects</h1>
+      </div>
+      <div
+        className={`flex flex-col items-center justify-center`}
+      >        
+        {projects}
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
+
