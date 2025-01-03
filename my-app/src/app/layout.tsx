@@ -104,7 +104,7 @@ export default function RootLayout({
           straight: false,
         },
         number: {
-          density: { enable: true, value_area: 1000 }, // Corrected 'area' to 'value_area'
+          density: { enable: true, value_area: 1000 },
           value: 215,
         },
         opacity: {
@@ -112,7 +112,7 @@ export default function RootLayout({
           animation: {
             enable: true,
             speed: 1,
-            minimumValue: 0.1, // Valid 'minimumValue' under opacity.animation
+            minimumValue: 0.1,
             sync: false,
           },
         },
@@ -122,7 +122,7 @@ export default function RootLayout({
           animation: {
             enable: true,
             speed: 1,
-            minimumValue: 0.5, // Valid 'minimumValue' under size.animation
+            minimumValue: 0.5,
             sync: false,
           },
         },
