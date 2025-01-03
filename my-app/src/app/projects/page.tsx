@@ -31,7 +31,7 @@ const Project: React.FC<ProjectProps> = ({
   const mappedTechnologies = technologies.map((technology, index) => (
     <div
       key={index}
-      className="text-sm md:text-md bg-gray-500 px-5 py-1 mb-3 rounded-full ml-4 text-white"
+      className="text-sm bg-zinc-800 font-thin px-3 py-2 mb-3 rounded-full ml-4 text-white"
     >
       <p>{technology}</p>
     </div>
@@ -52,7 +52,7 @@ const Project: React.FC<ProjectProps> = ({
       <div className="rounded-2xl flex flex-col px-14 py-10 md:mx-20 overflow-hidden project">
         <div className="flex flex-col md:flex-row">
           <div className="flex-col md:pr-14">
-            <p className="text-2xl pb-8">{projectName}</p>
+            <p className="text-2xl pb-8 font-medium">{projectName}</p>
             <p className="text-base font-extralight text-gray-200">
               {description}
             </p>
@@ -78,7 +78,7 @@ const Project: React.FC<ProjectProps> = ({
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-4xl pr-8"
+              className="text-4xl pr-8 duration-500"
             >
               <FaGithub />
             </a>

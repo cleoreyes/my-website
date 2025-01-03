@@ -103,7 +103,10 @@ body {
 /* Projects */
 
 .project {
-  background-color: rgba(92, 92, 102, 0.7);
+  background-color: rgba(92, 92, 102, 0.3);
+}
+.project:hover {
+  background-color: rgba(92, 92, 102, 0.9);
 }
 
 .hover\:tip-left {
