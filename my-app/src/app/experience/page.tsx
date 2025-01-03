@@ -43,7 +43,7 @@ export default function About() {
                     border: "1px solid rgba(0, 0, 0, 0.05)",
                     textAlign: "left",
                     padding: "1.3rem 2rem",
-                    margin: "2rem 0rem 5rem 0rem"
+                    margin: "2rem 0rem 5rem 0rem",
                   }}
                   contentArrowStyle={{
                     borderRight: "0.4rem solid rgba(255, 255, 255, 0.5)",
@@ -55,11 +55,15 @@ export default function About() {
                   iconStyle={{
                     background: "rgba(255, 255, 255, 0.15)",
                     fontSize: "1.5rem",
-                    color: "white"
+                    color: "white",
                   }}
                 >
-                  <h3 className="font-semibold capitalize text-white">{item.title}</h3>
-                  <p className="!mt-0 font-normal text-gray-300">{item.location}</p>
+                  <h3 className="font-semibold capitalize text-white">
+                    {item.title}
+                  </h3>
+                  <p className="!mt-0 font-normal text-gray-300">
+                    {item.location}
+                  </p>
                   <p className="!mt-1 !font-normal text-white/75">
                     {item.description}
                   </p>

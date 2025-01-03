@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 
-
-
 interface ProjectProps {
   projectName: string;
   duration: string;
@@ -118,9 +116,9 @@ const Projects: React.FC = () => {
         <button
           onClick={handlePrevPage}
           disabled={currentPage === 1}
-          className={`bg-gray-600/50 text-white p-1 rounded-full ${currentPage === 1 ? 'hidden' : 'visible'} `}
+          className={`bg-gray-600/50 text-white p-1 rounded-full ${currentPage === 1 ? "hidden" : "visible"} `}
         >
-          <MdKeyboardArrowLeft className="text-3xl"/>
+          <MdKeyboardArrowLeft className="text-3xl" />
         </button>
         <span className="px-4 py-2 text-white">
           {currentPage} of {totalPages}
@@ -128,9 +126,9 @@ const Projects: React.FC = () => {
         <button
           onClick={handleNextPage}
           disabled={currentPage === totalPages}
-          className={`bg-gray-600/50 text-white p-1 rounded-full ${currentPage === totalPages ? 'hidden' : 'visible'} `}
+          className={`bg-gray-600/50 text-white p-1 rounded-full ${currentPage === totalPages ? "hidden" : "visible"} `}
         >
-          <MdKeyboardArrowRight className="text-3xl"/>
+          <MdKeyboardArrowRight className="text-3xl" />
         </button>
       </div>
     </div>
