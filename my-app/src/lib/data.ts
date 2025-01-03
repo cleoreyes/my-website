@@ -12,7 +12,7 @@ export const experiencesData = [
     date: "2023 - 2026",
   },
   {
-    title: "Research Assistant",
+    title: "Research Assistant @ DAIS",
     location: "Bothell, Washington",
     description:
       'Worked on "iCare" project, an AI-driven chatbot initiative under Dr. Dong Si, focusing on enhancing user interactions and the overall functionality of the system.',
@@ -20,7 +20,7 @@ export const experiencesData = [
     date: "June 2023 - January 2024",
   },
   {
-    title: "Software Engineer Intern",
+    title: "Software Engineer Intern @ Allen Institute",
     location: "Seattle, Washington",
     description:
       "Worked on Brain Knowledge Platform by creating accessibility CI/CD pipeline and implemented new features, components, and UI/UX improvements.",
@@ -28,7 +28,7 @@ export const experiencesData = [
     date: "June 2024 - August 2024",
   },
   {
-    title: "Undergraduate Research Assistant",
+    title: "Research Assistant @ Code and Cognition Lab",
     location: "Seattle, Washington",
     description:
       'Conducting research with "Wordplay", an open-source project under the guidance of Dr. Amy J. Ko from the UW Information School and Paul G. Allen School for Computer Science and Engineering.',
@@ -38,6 +38,17 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    projectName: "T9 Predictive Text",
+    duration: "November 2024",
+    technologies: ["C", "Emacs"],
+    image: "/t_9.png",
+    imageAlt: "T9 Thumbnail",
+    githubLink: "https://github.com/cleoreyes/eterna",
+    projectLink: "https://eterna-app.vercel.app/",
+    description:
+      "Developed a T9 predictive text system in C, utilizing dynamic memory allocation, trie data structures, and efficient coding practices. Implemented numeric key sequence translation into words with a modular Makefile structure and ensured memory safety using Valgrind. Gained expertise in dynamic data handling, text processing, and test-driven development.",
+  },
   {
     projectName: "Eterna",
     duration: "October 2024",
@@ -95,7 +106,7 @@ export const projectsData = [
     githubLink: "https://github.com/cleoreyes/styleU.git",
     projectLink: "https://styleu.vercel.app/",
     description:
-      "styleU is a web application that addresses the trouble of personal styling. It allows users to take quizzes on their seasonal color palette and fashion style to better suit them. Users may also discover other styles and palettes to become more fashionably educated.",
+      "Developed and built \"StyleU\", a web application focused on personal styling and mitigating fast fashion and clothing waste. The platform allows users to take quizzes to identify their seasonal color palette and fashion style, providing tailored recommendations. Users can also explore additional styles and palettes to expand their fashion knowledge. The application features an interactive and responsive interface, enhancing user engagement and helping users refine their personal style.",
   },
   {
     projectName: "reUse",
@@ -107,7 +118,7 @@ export const projectsData = [
     projectLink:
       "https://www.figma.com/proto/gGEfVADkdn9NkJmPrmqIV8/reUse?node-id=6-55&t=jrlRCQT1ENBQTXYt-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=6%3A52&show-proto-sidebar=1",
     description:
-      "reUse is a mobile application targeting University of Washington students to encourage the use of reusable bags when shopping in grocery stores, with the goal of reducing the environmental impact of plastic bags. The app will feature a rewards system where users earn points for using reusable bags tracked by scanning a barcode dedicated to them. Users can redeem points for various incentives such as discounts at local businesses or donations to environmental causes. Furthermore, it will include reminders to bring reusable bags based on users’ shopping habits and campaigns to raise awareness about the environmental issues caused by plastic waste and how to mitigate them.",
+      "Engineered and visualized \"reUse\", a mobile application designed to encourage University of Washington students to use reusable bags while shopping, reducing the environmental impact of plastic bags. I designed and prototyped an intuitive rewards system where users earn points for using reusable bags, tracked via a unique barcode scan. Points can be redeemed for discounts at local businesses or donated to environmental causes. The app also includes personalized reminders based on shopping habits and campaigns to raise awareness about the environmental impact of plastic waste and ways to reduce it.",
   },
   {
     projectName: "I WAS HERE",
@@ -119,7 +130,7 @@ export const projectsData = [
     projectLink:
       "https://www.figma.com/proto/KgenoAMZzANY7vIuZsKcuC/I-WAS-HERE?page-id=431%3A851&node-id=461-851&viewport=429%2C636%2C0.66&t=1Oe9ZNkpGK4686nP-1&scaling=min-zoom",
     description:
-      "I WAS HERE a new social media app that is centered around voice messages, location, photo, and video. Its goal is to get rid of the performative and content creation attitude that comes with so many other platforms. Whether posting Memories (long term posts), or Moments (short-term story-like posts), our goal is to connect friends through an authentic media experience. Users will be able to share their content at or for a specific location to share with their friends to “unlock” and open later when they visit that place. Users will only see the content their friends create which follows one of our values: by friends FOR friends.",
+      "Designed and prototyped \"I WAS HERE\" is a social media app focused on voice messages, location, photos, and videos. It aims to move away from performative content creation, prioritizing authentic connections between friends. Users can post Memories (long-term) or Moments (short-term) tied to specific locations, unlocking content when friends visit those places. The platform ensures that users only see content created by their friends, embodying the value: by friends FOR friends.",
   },
   {
     projectName: "Michelin Star and Countries",
