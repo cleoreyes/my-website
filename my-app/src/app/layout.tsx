@@ -98,13 +98,13 @@ export default function RootLayout({
         move: {
           direction: MoveDirection.none,
           enable: true,
-          outModes: { default: OutMode.out },
+          outModes: { default: OutMode.bounce },
           random: true,
           speed: 0.2,
           straight: false,
         },
         number: {
-          density: { enable: true, value_area: 1000 },
+          density: { enable: true, value_area: 2000 },
           value: 215,
         },
         opacity: {
@@ -112,7 +112,7 @@ export default function RootLayout({
           animation: {
             enable: true,
             speed: 1,
-            minimumValue: 0.1,
+            minimumValue: 0.3,
             sync: false,
           },
         },
@@ -122,11 +122,12 @@ export default function RootLayout({
           animation: {
             enable: true,
             speed: 1,
-            minimumValue: 0.5,
+            minimumValue: 1, // Ensure particles maintain size
             sync: false,
           },
         },
       },
+      
       detectRetina: true,
     }),
     [],
