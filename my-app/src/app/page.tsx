@@ -44,7 +44,7 @@ export default function Home() {
     alt="Cleo"
     draggable={false}
     priority={true}
-    sizes="(max-width: 768px) 80vw, 500px"  // Adjust image size based on screen width
+    sizes="(max-width: 768px) 80vw, 500px"
   />
 </div>
       </div>
