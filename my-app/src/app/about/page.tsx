@@ -11,7 +11,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="min-h-screen px-44 mt-40">
+    <div className="min-h-screen px-6 sm:px-12 lg:px-44 mt-32 md:mt-40">
       <title>About</title>
       <div className="text-5xl text-white font-semibold text-left">
         <h1 className="pb-12">About</h1>
@@ -21,8 +21,8 @@ export default function About() {
           isVisible ? "bottom-enter" : "opacity-0"
         }`}
       >
-        <div className="flex flex-row items-center">
-          <div className="w-1/3 text-white flex flex-col items-center text-center">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="w-full sm:w-1/3 text-white flex flex-col items-center text-center mb-10">
             <Image
               className="rounded-full drop-shadow-2xl pb-4"
               src="/cleo_linkedin.jpeg"
@@ -64,7 +64,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="w-2/3 text-lg font-extralight pl-6 text-gray-200">
+          <div className="w-full sm:w-2/3 text-lg font-extralight pl-6 text-gray-200">
             <p className="pb-3">
               Hi there! I&apos;m Cleo Reyes, an undergraduate at the University
               of Washington, set to graduate in 2026. I&apos;m pursuing a degree
@@ -86,7 +86,7 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="flex flex-row text-white gap-14 pt-20 text-xl items-center justify-center">
+        <div className="flex md:flex-row flex-col text-white gap-14 pt-20 text-xl items-center justify-center px-10">
           <div>
             <p>creyes25 [at] uw.edu</p>
           </div>

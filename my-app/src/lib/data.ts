@@ -41,6 +41,7 @@ export const projectsData = [
   {
     projectName: "T9 Predictive Text",
     duration: "November 2024",
+    typeOfProject: "DubHacks 2024 Project",
     technologies: ["C", "Emacs"],
     image: "/t_9.png",
     imageAlt: "T9 Thumbnail",

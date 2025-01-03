@@ -7,7 +7,7 @@ export default function NavBar() {
   const pathname = usePathname();
 
   return (
-    <nav className="navbar flex flex-row md:justify-between items-center md:rounded-full drop-shadow-2xl bg-neutral-800 md:px-8 py-2 md:py-4 md:mx-40 text-white text-xs md:text-xl font-light fixed top-0 left-0 right-0 z-50 overflow-x-auto">
+    <nav className="navbar flex flex-row justify-between items-center md:rounded-full drop-shadow-2xl bg-neutral-800 md:px-8 py-2 md:py-4 md:mx-40 text-white text-xs md:text-xl font-light fixed top-0 left-0 right-0 z-50 overflow-x-auto">
       <div>
         <Link
           className={`navLink ${pathname === "/" ? "active" : ""}`}
@@ -18,7 +18,7 @@ export default function NavBar() {
       </div>
 
       <div
-        className={`flex flex-row md:flex-row justify-between items-center gap-2 md:gap-10 md:flex md:block`}
+        className={`flex flex-row md:flex-row justify-between items-center gap-2 md:gap-10`}
       >
         <Link
           className={`navLink ${pathname === "/projects" ? "active" : ""}`}
