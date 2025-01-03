@@ -22,8 +22,8 @@ export default function About() {
   });
 
   return (
-    <div className="min-h-screen px-44 mt-40">
-      <title>Experience</title>
+    <div className="min-h-screen px-6 sm:px-12 lg:px-44 mt-32 md:mt-40">
+      <title>About</title>
       <div className="text-5xl text-white font-semibold text-left">
         <h1 className="pb-12">Experience</h1>
       </div>
@@ -32,7 +32,7 @@ export default function About() {
           isVisible ? "bottom-enter" : "opacity-0"
         }`}
       >
-        <VerticalTimeline lineColor="rgba(255, 255, 255, 0.3)">
+        <VerticalTimeline lineColor="rgba(255, 255, 255, 0.05)">
           {experiencesData.map((item, index) => {
             return (
               <div key={index} ref={ref} className="vertical-timeline-element">
@@ -43,7 +43,7 @@ export default function About() {
                     border: "1px solid rgba(0, 0, 0, 0.05)",
                     textAlign: "left",
                     padding: "1.3rem 2rem",
-                    margin: "2rem 0rem 5rem 0rem",
+                    // margin: "2rem 0rem 5rem 0rem",
                   }}
                   contentArrowStyle={{
                     borderRight: "0.4rem solid rgba(255, 255, 255, 0.5)",

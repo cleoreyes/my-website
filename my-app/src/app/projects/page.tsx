@@ -44,17 +44,17 @@ const Project: React.FC<ProjectProps> = ({
     <div
       className={`text-white pb-10 group ${isVisible ? "bottom-enter" : "opacity-0"}`}
     >
-      <div className="rounded-2xl flex flex-col px-14 py-10 mx-20 overflow-hidden project">
+      <div className="rounded-2xl flex flex-col px-14 py-10 md:mx-20 overflow-hidden project">
         <div className="flex flex-col md:flex-row">
-          <div className="flex-col pr-14">
+          <div className="flex-col md:pr-14">
             <p className="text-2xl pb-8">{projectName}</p>
             <p className="text-base font-extralight text-gray-200">
               {description}
             </p>
           </div>
-          <div className="translate-x-[45%] translate-y-[45%] relative flex items-center justify-center overflow-hidden rounded-lg transform transition-transform duration-500 group-hover:translate-x-[0%] group-hover:translate-y-[0%] group-hover:scale-110">
+          <div className="md:translate-x-[45%] md:translate-y-[45%] relative flex items-center justify-center overflow-hidden rounded-lg transform transition-transform duration-500 group-hover:translate-x-[0%] group-hover:translate-y-[0%] md:group-hover:scale-110">
             <Image
-              className="rounded-lg drop-shadow-2xl"
+              className="rounded-lg drop-shadow-2xl py-6 md:py-0"
               src={image}
               width={4000}
               height={4000}
@@ -103,8 +103,8 @@ const Projects: React.FC = () => {
     ));
 
   return (
-    <div className="min-h-screen px-44 mt-40">
-      <title>Projects</title>
+    <div className="min-h-screen px-6 sm:px-12 lg:px-44 mt-32 md:mt-40">
+      <title>About</title>
       <div className="text-5xl text-white font-semibold text-left">
         <h1 className="pb-12">Projects</h1>
       </div>
