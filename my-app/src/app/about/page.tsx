@@ -64,7 +64,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="w-full sm:w-2/3 text-lg font-extralight pl-6 text-gray-200">
+          <div className="w-full sm:w-2/3 text-sm md:text-lg font-extralight pl-6 text-gray-200">
             <p className="pb-3">
               Hi there! I&apos;m Cleo Reyes, an undergraduate at the University
               of Washington, set to graduate in 2026. I&apos;m pursuing a degree

@@ -54,7 +54,7 @@ const Project: React.FC<ProjectProps> = ({
           </div>
           <div className="md:translate-x-[45%] md:translate-y-[45%] relative flex items-center justify-center overflow-hidden rounded-lg transform transition-transform duration-500 group-hover:translate-x-[0%] group-hover:translate-y-[0%] md:group-hover:scale-110">
             <Image
-              className="rounded-lg drop-shadow-2xl py-6 md:py-0"
+              className="rounded-lg drop-shadow-2xl md:py-0"
               src={image}
               width={4000}
               height={4000}
@@ -103,7 +103,7 @@ const Projects: React.FC = () => {
     ));
 
   return (
-    <div className="min-h-screen px-6 sm:px-12 lg:px-44 mt-32 md:mt-40">
+    <div className="min-h-screen px-6 lg:px-44 mt-32 md:mt-40">
       <title>About</title>
       <div className="text-5xl text-white font-semibold text-left">
         <h1 className="pb-12">Projects</h1>
