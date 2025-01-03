@@ -4,6 +4,7 @@ import { projectsData } from "@/lib/data";
 import { useEffect, useState } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import { FaGithub, FaLink } from "react-icons/fa6";
 
 interface ProjectProps {
   projectName: string;
@@ -20,9 +21,12 @@ interface ProjectProps {
 const Project: React.FC<ProjectProps> = ({
   projectName,
   technologies,
+  githubLink,
+  projectLink,
   image,
   imageAlt,
   description,
+
 }) => {
   const mappedTechnologies = technologies.map((technology, index) => (
     <div
@@ -39,6 +43,7 @@ const Project: React.FC<ProjectProps> = ({
     const timeout = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timeout);
   }, []);
+  console.log(githubLink, projectLink);;
 
   return (
     <div
@@ -67,6 +72,33 @@ const Project: React.FC<ProjectProps> = ({
         <div className="flex flex-wrap justify-start pb-2 -ml-4 pt-5">
           {mappedTechnologies}
         </div>
+        <div className="flex flex-row justify-start text-4xl pt-5">
+          {githubLink ? (
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-4xl pr-8"
+            >
+              <FaGithub />
+            </a>
+          ) : (
+            <></>
+          )}
+
+          {projectLink ? (
+            <a
+              href={projectLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-4xl"
+            >
+              <FaLink />
+            </a>
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -88,8 +120,10 @@ const Projects: React.FC = () => {
   };
 
   const currentProjects = Object.values(projectsData)
-    .slice((currentPage - 1) * projectsPerPage, currentPage * projectsPerPage)
-    .map((project) => (
+  .slice((currentPage - 1) * projectsPerPage, currentPage * projectsPerPage)
+  .map((project) => {
+    console.log(project);
+    return (
       <Project
         projectName={project.projectName}
         duration={project.duration}
@@ -98,9 +132,13 @@ const Projects: React.FC = () => {
         image={project.image}
         imageAlt={project.imageAlt}
         description={project.description}
+        githubLink={project.githubLink}
+        projectLink={project.projectLink}
         key={project.projectName}
       />
-    ));
+    );
+  });
+
 
   return (
     <div className="min-h-screen px-6 lg:px-44 mt-32 md:mt-40">

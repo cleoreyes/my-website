@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaLinkedin, FaGithub, FaXTwitter } from "react-icons/fa6";
 
-
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -78,9 +77,9 @@ export default function About() {
             </p>
             <p className="pb-3">
               Outside of academics, I enjoy attending hackathons, exploring new
-              technologies, dancing, cooking, baking, and being a massive foodie by trying out
-              new cafes and restaurants. I&apos;m always eager to connect,
-              collaborate, and learn from others.
+              technologies, dancing, cooking, baking, and being a massive foodie
+              by trying out new cafes and restaurants. I&apos;m always eager to
+              connect, collaborate, and learn from others.
             </p>
             <p className="pb-3">
               Feel free to reach out if you would like to chat or have any

@@ -122,12 +122,12 @@ export default function RootLayout({
           animation: {
             enable: true,
             speed: 1,
-            minimumValue: 1, // Ensure particles maintain size
+            minimumValue: 1,
             sync: false,
           },
         },
       },
-      
+
       detectRetina: true,
     }),
     [],

@@ -36,17 +36,17 @@ export default function Home() {
           </p>
         </div>
         <div className="flex-1 flex items-center justify-center">
-  <Image
-    className="rounded-lg floating drop-shadow-xl"
-    src="/website_logo.png"
-    width={500}
-    height={500}
-    alt="Cleo"
-    draggable={false}
-    priority={true}
-    sizes="(max-width: 768px) 80vw, 500px"
-  />
-</div>
+          <Image
+            className="rounded-lg floating drop-shadow-xl"
+            src="/website_logo.png"
+            width={500}
+            height={500}
+            alt="Cleo"
+            draggable={false}
+            priority={true}
+            sizes="(max-width: 768px) 80vw, 500px"
+          />
+        </div>
       </div>
     </div>
   );

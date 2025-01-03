@@ -37,7 +37,19 @@ export const experiencesData = [
   },
 ] as const;
 
-export const projectsData = [
+type Project = {
+  projectName: string;
+  duration: string;
+  typeOfProject: string;
+  technologies: string[];
+  image: string;
+  imageAlt: string;
+  githubLink?: string;
+  projectLink?: string;
+  description: string;
+};
+
+export const projectsData: Project[] = [
   {
     projectName: "T9 Predictive Text",
     duration: "November 2024",
@@ -45,8 +57,6 @@ export const projectsData = [
     technologies: ["C", "Emacs"],
     image: "/t_9.png",
     imageAlt: "T9 Thumbnail",
-    githubLink: "https://github.com/cleoreyes/eterna",
-    projectLink: "https://eterna-app.vercel.app/",
     description:
       "Developed a T9 predictive text system in C, utilizing dynamic memory allocation, trie data structures, and efficient coding practices. Implemented numeric key sequence translation into words with a modular Makefile structure and ensured memory safety using Valgrind. Gained expertise in dynamic data handling, text processing, and test-driven development.",
   },
@@ -88,6 +98,7 @@ export const projectsData = [
     image: "/vaccine-scheduler.png",
     imageAlt: "User Interface of Vaccine Scheduler",
     githubLink: "https://github.com/cleoreyes/vaccine-scheduler.git",
+    projectLink: "cleoreyes.com",
     description:
       "Architected and developed a tailored database system to manage user data effectively and facilitate interactive appointment scheduling through a command-line interface. The system was built using Java and SQL, with data tables securely hosted in Microsoft Azure SQL Database. To safeguard sensitive data, I implemented robust security protocols, including encryption, hashing, and identity management. These measures ensured data confidentiality without compromising the system's performance, allowing for efficient and secure query processing.",
   },
@@ -107,7 +118,7 @@ export const projectsData = [
     githubLink: "https://github.com/cleoreyes/styleU.git",
     projectLink: "https://styleu.vercel.app/",
     description:
-      "Developed and built \"StyleU\", a web application focused on personal styling and mitigating fast fashion and clothing waste. The platform allows users to take quizzes to identify their seasonal color palette and fashion style, providing tailored recommendations. Users can also explore additional styles and palettes to expand their fashion knowledge. The application features an interactive and responsive interface, enhancing user engagement and helping users refine their personal style.",
+      'Developed and built "StyleU", a web application focused on personal styling and mitigating fast fashion and clothing waste. The platform allows users to take quizzes to identify their seasonal color palette and fashion style, providing tailored recommendations. Users can also explore additional styles and palettes to expand their fashion knowledge. The application features an interactive and responsive interface, enhancing user engagement and helping users refine their personal style.',
   },
   {
     projectName: "reUse",
@@ -119,7 +130,7 @@ export const projectsData = [
     projectLink:
       "https://www.figma.com/proto/gGEfVADkdn9NkJmPrmqIV8/reUse?node-id=6-55&t=jrlRCQT1ENBQTXYt-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=6%3A52&show-proto-sidebar=1",
     description:
-      "Engineered and visualized \"reUse\", a mobile application designed to encourage University of Washington students to use reusable bags while shopping, reducing the environmental impact of plastic bags. I designed and prototyped an intuitive rewards system where users earn points for using reusable bags, tracked via a unique barcode scan. Points can be redeemed for discounts at local businesses or donated to environmental causes. The app also includes personalized reminders based on shopping habits and campaigns to raise awareness about the environmental impact of plastic waste and ways to reduce it.",
+      'Engineered and visualized "reUse", a mobile application designed to encourage University of Washington students to use reusable bags while shopping, reducing the environmental impact of plastic bags. I designed and prototyped an intuitive rewards system where users earn points for using reusable bags, tracked via a unique barcode scan. Points can be redeemed for discounts at local businesses or donated to environmental causes. The app also includes personalized reminders based on shopping habits and campaigns to raise awareness about the environmental impact of plastic waste and ways to reduce it.',
   },
   {
     projectName: "I WAS HERE",
@@ -131,7 +142,7 @@ export const projectsData = [
     projectLink:
       "https://www.figma.com/proto/KgenoAMZzANY7vIuZsKcuC/I-WAS-HERE?page-id=431%3A851&node-id=461-851&viewport=429%2C636%2C0.66&t=1Oe9ZNkpGK4686nP-1&scaling=min-zoom",
     description:
-      "Designed and prototyped \"I WAS HERE\" is a social media app focused on voice messages, location, photos, and videos. It aims to move away from performative content creation, prioritizing authentic connections between friends. Users can post Memories (long-term) or Moments (short-term) tied to specific locations, unlocking content when friends visit those places. The platform ensures that users only see content created by their friends, embodying the value: by friends FOR friends.",
+      'Designed and prototyped "I WAS HERE" is a social media app focused on voice messages, location, photos, and videos. It aims to move away from performative content creation, prioritizing authentic connections between friends. Users can post Memories (long-term) or Moments (short-term) tied to specific locations, unlocking content when friends visit those places. The platform ensures that users only see content created by their friends, embodying the value: by friends FOR friends.',
   },
   {
     projectName: "Michelin Star and Countries",
