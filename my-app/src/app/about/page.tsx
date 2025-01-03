@@ -71,7 +71,7 @@ export default function About() {
               of Washington, set to graduate in 2026. I&apos;m pursuing a degree
               in Informatics with a focus on Software Engineering, and I&apos;m
               deeply passionate about using technology to make a positive impact
-              on the world. My interests span creating accessibile software, big
+              on the world. I love problem solving and building things. sMy interests span creating accessibile software, big
               data, and responsible use of AI and ML to solve real word
               problems.
             </p>

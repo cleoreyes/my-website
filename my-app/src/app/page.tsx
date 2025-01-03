@@ -16,7 +16,7 @@ export default function Home() {
       <title>Cleo Reyes</title>
 
       <div
-        className={`absolute top-0 left-0 w-full h-full flex flex-col-reverse md:flex-row items-center justify-center px-10 md:px-40 text-white ${
+        className={`absolute top-0 left-0 w-full h-full flex flex-col-reverse md:flex-row items-center justify-center px-10 md:px-44 text-white ${
           isVisible ? "top-enter" : "opacity-0"
         }`}
       >
@@ -28,7 +28,7 @@ export default function Home() {
             Developing software solutions that are optimal, efficient,
             accessible, interactive, and secure for all users.
           </p>
-          <p className="text-base md:text-2xl mt-4">
+          <p className="text-base md:text-lg mt-4 font-light">
             Hi, my name is Cleo. I am currently an undergraduate at the
             University of Washington - Seattle majoring in Informatics on a
             software engineering track. Focusing on human-computer interaction,
@@ -39,8 +39,8 @@ export default function Home() {
           <Image
             className="rounded-lg floating drop-shadow-xl"
             src="/website_logo.png"
-            width={500}
-            height={500}
+            width={440}
+            height={440}
             alt="Cleo"
             draggable={false}
             priority={true}

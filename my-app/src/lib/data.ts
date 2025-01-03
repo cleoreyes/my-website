@@ -58,7 +58,7 @@ export const projectsData: Project[] = [
     image: "/t_9.png",
     imageAlt: "T9 Thumbnail",
     description:
-      "Developed a T9 predictive text system in C, utilizing dynamic memory allocation, trie data structures, and efficient coding practices. Implemented numeric key sequence translation into words with a modular Makefile structure and ensured memory safety using Valgrind. Gained expertise in dynamic data handling, text processing, and test-driven development.",
+      "Developed a T9 predictive text system in C, utilizing dynamic memory allocation, custom trie data structures, and efficient coding practices. Implemented numeric key sequence translation into words with a modular Makefile structure and ensured memory safety using Valgrind. Gained expertise in dynamic data handling, text processing, and test-driven development.",
   },
   {
     projectName: "Eterna",

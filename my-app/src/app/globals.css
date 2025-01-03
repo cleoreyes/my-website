@@ -72,7 +72,7 @@ body {
 }
 
 .top-enter {
-  animation: slideInFromTop 0.8s ease-out forwards;
+  animation: slideInFromTop 0.45s ease-out forwards;
 }
 
 /* NavBar */
