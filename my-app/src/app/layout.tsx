@@ -1,4 +1,3 @@
-// app/layout.tsx
 "use client";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -105,7 +104,7 @@ export default function RootLayout({
           straight: false,
         },
         number: {
-          density: { enable: true, area: 1000 },
+          density: { enable: true, value_area: 1000 }, // Corrected 'area' to 'value_area'
           value: 215,
         },
         opacity: {
@@ -113,7 +112,7 @@ export default function RootLayout({
           animation: {
             enable: true,
             speed: 1,
-            minimumValue: 0.1,
+            minimumValue: 0.1, // Valid 'minimumValue' under opacity.animation
             sync: false,
           },
         },
@@ -123,7 +122,7 @@ export default function RootLayout({
           animation: {
             enable: true,
             speed: 1,
-            minimumValue: 0.5,
+            minimumValue: 0.5, // Valid 'minimumValue' under size.animation
             sync: false,
           },
         },
