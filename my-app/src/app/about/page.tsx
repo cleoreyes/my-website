@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { FaLinkedin, FaGithub, FaXTwitter } from "react-icons/fa6";
+
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -94,18 +96,25 @@ export default function About() {
             href="https://www.linkedin.com/in/cleoreyes"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-neutral-600 hover:bg-neutral-500 duration-200 px-5 py-2 rounded-full flex items-center justify-center text-white"
+            className="bg-neutral-600 hover:bg-neutral-500 duration-200 px-4 py-4 rounded-full flex items-center justify-center text-white text-3xl"
           >
-            LinkedIn
+            <FaLinkedin />
           </a>
-
           <a
             href="https://github.com/cleoreyes"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-neutral-600 hover:bg-neutral-500 duration-200 px-5 py-2 rounded-full flex items-center justify-center text-white"
+            className="bg-neutral-600 hover:bg-neutral-500 duration-200 px-4 py-4 rounded-full flex items-center justify-center text-white text-3xl"
           >
-            GitHub
+            <FaGithub />
+          </a>
+          <a
+            href="https://x.com/cclleeeo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-neutral-600 hover:bg-neutral-500 duration-200 px-4 py-4 rounded-full flex items-center justify-center text-white text-3xl"
+          >
+            <FaXTwitter />
           </a>
         </div>
       </div>
