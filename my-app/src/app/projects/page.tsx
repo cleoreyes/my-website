@@ -26,7 +26,6 @@ const Project: React.FC<ProjectProps> = ({
   image,
   imageAlt,
   description,
-
 }) => {
   const mappedTechnologies = technologies.map((technology, index) => (
     <div
@@ -43,7 +42,7 @@ const Project: React.FC<ProjectProps> = ({
     const timeout = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timeout);
   }, []);
-  console.log(githubLink, projectLink);;
+  console.log(githubLink, projectLink);
 
   return (
     <div
@@ -120,25 +119,24 @@ const Projects: React.FC = () => {
   };
 
   const currentProjects = Object.values(projectsData)
-  .slice((currentPage - 1) * projectsPerPage, currentPage * projectsPerPage)
-  .map((project) => {
-    console.log(project);
-    return (
-      <Project
-        projectName={project.projectName}
-        duration={project.duration}
-        typeOfProject={project.typeOfProject}
-        technologies={project.technologies}
-        image={project.image}
-        imageAlt={project.imageAlt}
-        description={project.description}
-        githubLink={project.githubLink}
-        projectLink={project.projectLink}
-        key={project.projectName}
-      />
-    );
-  });
-
+    .slice((currentPage - 1) * projectsPerPage, currentPage * projectsPerPage)
+    .map((project) => {
+      console.log(project);
+      return (
+        <Project
+          projectName={project.projectName}
+          duration={project.duration}
+          typeOfProject={project.typeOfProject}
+          technologies={project.technologies}
+          image={project.image}
+          imageAlt={project.imageAlt}
+          description={project.description}
+          githubLink={project.githubLink}
+          projectLink={project.projectLink}
+          key={project.projectName}
+        />
+      );
+    });
 
   return (
     <div className="min-h-screen px-6 lg:px-44 mt-32 md:mt-40">

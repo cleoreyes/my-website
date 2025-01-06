@@ -20,6 +20,14 @@ export const experiencesData = [
     date: "June 2023 - January 2024",
   },
   {
+    title: "Software Developer @ MESH",
+    location: "Seattle, Washington",
+    description:
+      "Developed professional public facing website for registered student organization at the University of Washington.",
+    icon: React.createElement(CgWorkAlt),
+    date: "January 2024 - June 2024",
+  },
+  {
     title: "Software Engineer Intern @ Allen Institute",
     location: "Seattle, Washington",
     description:

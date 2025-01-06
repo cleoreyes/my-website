@@ -69,11 +69,13 @@ export default function About() {
             <p className="pb-3">
               Hi there! I&apos;m Cleo Reyes, an undergraduate at the University
               of Washington, set to graduate in 2026. I&apos;m pursuing a degree
-              in Informatics with a focus on Software Engineering, and I&apos;m
-              deeply passionate about using technology to make a positive impact
+              in Informatics with a focus on Software Engineering. My journey has been shaped by a deep passion for using technology to better the lives of others and solve real-world problems.
               on the world. I love problem solving and building things. My interests span creating accessibile software, big
               data, and responsible use of AI and ML to solve real word
               problems.
+            </p>
+            <p className="pb-3">
+            Ever since I was young, I was fascinated by technology and always knew that it was something I wanted to pursue. As a first-generation student, I want to leverage my experiences and background to make meaningful contributions in the tech industry. By pushing boundaries and continuing to grow as a technologist, I hope to pave the way for others to thrive in this field to break barriers for underrepresented communities.
             </p>
             <p className="pb-3">
               Outside of academics, I enjoy attending hackathons, exploring new
