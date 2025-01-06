@@ -36,12 +36,20 @@ export const experiencesData = [
     date: "June 2024 - August 2024",
   },
   {
-    title: "Research Assistant @ Code and Cognition Lab",
+    title: "Undergraduate Researcher @ Code and Cognition Lab",
     location: "Seattle, Washington",
     description:
-      'Conducting research with "Wordplay", an open-source project under the guidance of Dr. Amy J. Ko from the UW Information School and Paul G. Allen School for Computer Science and Engineering.',
+      'Conducting research for "Wordplay", an open-source project under the guidance of Dr. Amy J. Ko from the UW Information School and Paul G. Allen School for Computer Science and Engineering.',
     icon: React.createElement(CgWorkAlt),
     date: "January 2024 - Present",
+  },
+  {
+    title: "Software Developer @ Eat Together",
+    location: "Seattle, Washington",
+    description:
+      "Developing features for an student-based startup application that aims to connect students through shared meals..",
+    icon: React.createElement(CgWorkAlt),
+    date: "January 2025 - Present",
   },
 ] as const;
 
