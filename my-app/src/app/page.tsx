@@ -31,8 +31,8 @@ export default function Home() {
           <p className="text-base md:text-lg mt-4 font-light">
             Hi, my name is Cleo. I am currently an undergraduate at the
             University of Washington - Seattle majoring in Informatics on a
-            software engineering track. Focusing on human-computer interaction,
-            computer science, data science, and cybersecurity.
+            software engineering track. Focusing on human-computer interaction, cybersecurity,
+            computer science, data science.
           </p>
         </div>
         <div className="flex-1 flex items-center justify-center">

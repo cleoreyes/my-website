@@ -1,6 +1,6 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { LuGraduationCap } from "react-icons/lu";
+import { FaSchool, FaBook, FaSuitcase } from "react-icons/fa6";
+
 
 export const experiencesData = [
   {
@@ -8,7 +8,7 @@ export const experiencesData = [
     location: "Seattle, WA",
     description:
       "I am an undergraduate student at the University of Washington majoring in Informatics studying software engineering.",
-    icon: React.createElement(LuGraduationCap),
+    icon: React.createElement(FaSchool),
     date: "2023 - 2026",
   },
   {
@@ -16,7 +16,7 @@ export const experiencesData = [
     location: "Bothell, Washington",
     description:
       'Worked on "iCare" project, an AI-driven chatbot initiative under Dr. Dong Si, focusing on enhancing user interactions and the overall functionality of the system.',
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(FaBook),
     date: "June 2023 - January 2024",
   },
   {
@@ -24,7 +24,7 @@ export const experiencesData = [
     location: "Seattle, Washington",
     description:
       "Developed professional public facing website for registered student organization at the University of Washington.",
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(FaSuitcase),
     date: "January 2024 - June 2024",
   },
   {
@@ -32,7 +32,7 @@ export const experiencesData = [
     location: "Seattle, Washington",
     description:
       "Worked on Brain Knowledge Platform by creating accessibility CI/CD pipeline and implemented new features, components, and UI/UX improvements.",
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(FaSuitcase),
     date: "June 2024 - August 2024",
   },
   {
@@ -40,7 +40,7 @@ export const experiencesData = [
     location: "Seattle, Washington",
     description:
       'Conducting research for "Wordplay", an open-source project under the guidance of Dr. Amy J. Ko from the UW Information School and Paul G. Allen School for Computer Science and Engineering.',
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(FaBook),
     date: "January 2024 - Present",
   },
   {
@@ -48,7 +48,7 @@ export const experiencesData = [
     location: "Seattle, Washington",
     description:
       "Developing features for an student-based startup application that aims to connect students through shared meals..",
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(FaSuitcase),
     date: "January 2025 - Present",
   },
 ] as const;
