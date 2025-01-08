@@ -49,7 +49,7 @@ export const experiencesData = [
     description:
       "Developing features for an student-based startup application that aims to connect students through shared meals..",
     icon: React.createElement(FaSuitcase),
-    date: "January 2025 - Present",
+    date: "December 2024 - Present",
   },
 ] as const;
 
